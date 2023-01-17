@@ -1,0 +1,72 @@
+$fa-font-path: "../fonts/font-awesome" !default;
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+@import "bootstrap/scss/bootstrap";
+
+//----------General---------------//
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-w-100 {
+    width: 100px;
+}
+
+.my-bg-dark {
+    background-color: rgb(93, 90, 90) !important;
+}
+
+//-----------Admin-----------//
+
+#admin {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    #wrapper-left {
+        width: 280px;
+        height: 100vh;
+
+
+        //------------sidebar------------//
+        #sidebar {
+            height: 100%;
+
+            #logo-sidebar{
+                margin-left: 1rem;
+                span {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    #wrapper-right {
+        width: calc(100% - 280px);
+        height: 100vh;
+
+        .navbar {
+            height: 80px;
+        }
+
+        main {
+            height: calc(100% - 80px);
+            width: 100%;
+            overflow-y: scroll;
+        }
+    }
+}
+
+//----------projects table-----------------//
+
+.my-table {
+    th, td {
+        vertical-align: middle;
+    }
+}
