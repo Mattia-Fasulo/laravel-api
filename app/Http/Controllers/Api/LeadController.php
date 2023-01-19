@@ -31,10 +31,10 @@ class LeadController extends Controller
             $new_lead = new Lead();
             $new_lead->fill($data);
             $new_lead->save();
-            echo $new_lead;
+
 
             $contact = new NewContact($new_lead);
-            dd($contact);
+            // dd($contact);
             Mail::to('info@beanfolio')->send($contact);
 
             return response()->json([
